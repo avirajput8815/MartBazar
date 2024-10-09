@@ -1,0 +1,122 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.cardview.widget.CardView
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    tools:ignore="MissingConstraints"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    tools:context=".Adapter"
+    android:layout_margin="10dp"
+    >
+
+    <androidx.constraintlayout.widget.ConstraintLayout
+        android:id="@+id/adapter"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_margin="10dp"
+        >
+
+        <!--        <CheckBox-->
+        <!--            android:id="@+id/checkbox"-->
+        <!--            android:layout_width="40dp"-->
+        <!--            android:layout_height="40dp"-->
+        <!--            android:layout_margin="5dp"-->
+        <!--            app:layout_constraintTop_toTopOf="parent"-->
+        <!--            app:layout_constraintBottom_toBottomOf="parent"-->
+        <!--            />-->
+
+        <ImageView
+            android:id="@+id/Image"
+            android:layout_width="130dp"
+            android:layout_height="130dp"
+            android:layout_margin="10dp">
+        </ImageView>
+
+        <TextView
+            android:id="@+id/ProductName"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Product Name"
+            android:layout_margin="10dp"
+            android:textSize="16sp"
+            app:layout_constraintTop_toTopOf="parent"
+            app:layout_constraintStart_toEndOf="@id/Image"
+            />
+
+        <ImageView
+            android:id="@+id/Delete"
+            android:src="@drawable/delete"
+            android:layout_width="24dp"
+            android:layout_height="24dp"
+            android:layout_marginTop="8dp"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintTop_toTopOf="parent">
+        </ImageView>
+
+        <RatingBar
+            android:id="@+id/Rating"
+            android:layout_width="250dp"
+            android:layout_height="wrap_content"
+            android:text="Rating"
+            android:focusable="false"
+            android:clickable="false"
+            android:scaleX=".3"
+            android:rating="3.5"
+            android:scaleY=".3"
+            android:transformPivotX="0dp"
+            android:transformPivotY="0dp"
+            android:max="5"
+            android:layout_margin="10dp"
+            app:layout_constraintStart_toEndOf="@id/Image"
+            app:layout_constraintTop_toBottomOf="@id/ProductName"
+            />
+
+        <TextView
+            android:id="@+id/Price"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Price"
+            android:layout_margin="10dp"
+            android:textSize="16sp"
+            app:layout_constraintStart_toEndOf="@id/Image"
+            app:layout_constraintTop_toBottomOf="@id/Rating"
+            />
+
+
+
+        <ImageView
+            android:id="@+id/AddCount"
+            android:layout_width="24dp"
+            android:layout_height="24dp"
+            android:layout_margin="10dp"
+            android:src="@drawable/add"
+            android:gravity="center"
+            app:layout_constraintTop_toBottomOf="@id/Price"
+            app:layout_constraintStart_toEndOf="@id/Image">
+        </ImageView>
+
+        <TextView
+            android:id="@+id/Count"
+            android:layout_width="60dp"
+            android:layout_height="wrap_content"
+            android:layout_margin="10dp"
+            android:gravity="center"
+            app:layout_constraintTop_toBottomOf="@id/Price"
+            app:layout_constraintStart_toEndOf="@id/AddCount"
+            />
+
+        <ImageView
+            android:id="@+id/MinusCount"
+            android:layout_width="24dp"
+            android:layout_height="24dp"
+            android:layout_margin="10dp"
+            android:src="@drawable/minus"
+            android:gravity="center"
+            app:layout_constraintTop_toBottomOf="@id/Price"
+            app:layout_constraintStart_toEndOf="@id/Count">
+        </ImageView>
+
+    </androidx.constraintlayout.widget.ConstraintLayout>
+
+</androidx.cardview.widget.CardView>

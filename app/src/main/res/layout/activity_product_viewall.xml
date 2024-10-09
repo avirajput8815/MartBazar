@@ -1,0 +1,108 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".About_Fragment"
+    android:background="#FBF762"
+    android:layout_margin="15dp">
+
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:layout_marginLeft="6dp"
+        android:layout_marginRight="6dp" >
+
+        <TextView
+            android:id="@+id/search"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:gravity="center"
+            android:text="Search"
+            android:textSize="25dp"
+            android:textColor="#1D7BEC"
+            android:textStyle="bold"
+            tools:ignore="MissingConstraints"
+            android:layout_marginBottom="15dp"/>
+
+        <EditText
+            android:id="@+id/search_bar"
+            android:layout_width="320dp"
+            android:layout_height="wrap_content"
+            android:layout_below="@+id/search"
+            android:layout_marginEnd="8dp"
+            android:drawableLeft="@drawable/baseline_search_24"
+            android:drawablePadding="10dp"
+            android:hint="Search Here"
+            android:minHeight="48dp"
+            android:padding="7dp"
+            android:textColor="@android:color/black"
+            android:textColorHint="#97BDEA"
+            tools:ignore="MissingConstraints" />
+
+        <ImageView
+            android:layout_width="35dp"
+            android:layout_height="36dp"
+            android:src="@drawable/home"
+            android:layout_toEndOf="@+id/search_bar"
+            android:layout_below="@+id/search"
+            android:layout_marginLeft="10dp"
+            android:id="@+id/filter"
+            />
+
+
+        <TextView
+            android:id="@+id/pdType"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Searing"
+            android:textSize="20dp"
+            android:textColor="#1D7BEC"
+            android:textStyle="bold"
+            android:layout_below="@+id/search_bar"
+            android:layout_marginTop="20dp"/>
+
+        <TextView
+            android:id="@+id/pdType1"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="'Prodt Type'"
+            android:textSize="25dp"
+            android:textStyle="bold"
+            android:textColor="#1D7BEC"
+            android:layout_toEndOf="@+id/pdType"
+            android:layout_below="@+id/search_bar"
+            android:layout_marginTop="17dp"
+            android:layout_marginLeft="10dp"/>
+
+        <TextView
+            android:id="@+id/Resut"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:textSize="20dp"
+            android:textStyle="bold"
+            android:text="View all"
+            android:textColor="#1D7BEC"
+            android:layout_below="@+id/search_bar"
+            android:layout_alignParentRight="true"
+            android:layout_marginTop="20dp"
+            />
+
+        <GridLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:layout_below="@+id/pdType"
+            android:layout_marginTop="25dp"
+            >
+
+            <androidx.recyclerview.widget.RecyclerView
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:id="@+id/prodtRc">
+            </androidx.recyclerview.widget.RecyclerView>
+        </GridLayout>
+
+    </RelativeLayout>
+
+</androidx.constraintlayout.widget.ConstraintLayout>

@@ -1,0 +1,78 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".About_Fragment"
+    >
+
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent">
+
+        <TextView
+            android:id="@+id/YourCart"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="Your Cart"
+            android:textSize="25dp"
+            android:textStyle="bold"
+            android:textColor="#1D7BEC"
+            android:layout_marginLeft="20dp"
+            android:layout_marginBottom="15dp"/>
+
+
+        <androidx.recyclerview.widget.RecyclerView
+            android:layout_width="match_parent"
+            android:layout_height="0dp"
+            android:id="@+id/prodtRc"
+            android:layout_marginTop="10dp"
+            android:layout_below="@+id/YourCart"
+            android:layout_above="@+id/TotalPrice">
+        </androidx.recyclerview.widget.RecyclerView>
+
+
+        <TextView
+            android:id="@+id/TotalPrice"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Total Price"
+            android:textSize="20sp"
+            android:textStyle="bold"
+            android:textColor="#1D7BEC"
+            android:layout_marginStart="10dp"
+            android:layout_above="@+id/checkOut"
+            android:layout_marginTop="30dp"/>
+
+        <TextView
+            android:id="@+id/TotalAmount"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_above="@+id/checkOut"
+            android:layout_marginStart="110dp"
+            android:layout_marginTop="24dp"
+            android:textColor="#1D7BEC"
+            android:layout_toEndOf="@+id/TotalPrice"
+            android:text="Rs. Amount"
+            android:textSize="25sp"
+            android:textStyle="bold" />
+
+        <Button
+            android:id="@+id/checkOut"
+            android:layout_width="350dp"
+            android:layout_height="wrap_content"
+            android:text="Check Out"
+            android:textStyle="bold"
+            android:backgroundTint="#1835EA"
+            android:layout_centerHorizontal="true"
+            android:layout_alignParentBottom="true"
+            android:gravity="center"
+            android:layout_marginTop="10dp"
+            android:layout_marginBottom="10dp"
+
+            />
+
+    </RelativeLayout>
+
+</androidx.constraintlayout.widget.ConstraintLayout>
